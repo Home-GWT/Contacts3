@@ -2,15 +2,33 @@ package com.uibinder.moradan.shared.domain;
 
 import com.uibinder.moradan.shared.ContactList;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
-* Это бин, на это указывает 'Serializable'
+* Created by alexandr on 28.10.15.
 */
+
+@Entity
+@Table(name = "CONTACTS_HIB")
+@NamedQueries({
+        @NamedQuery(name ="contacts.findAll", query = "SELECT CONTACTS_HIB FROM ContactPerson contacts")
+})
 public class ContactPerson implements Serializable {
-    /**
-     * Mandatory for RPC serialization.
-     */
+
+    @Id
+    @Column(name = "id")
+    private String id;
+
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
+
+    @Column(name = "email_address")
+    private String emailAddress;
+
     public ContactPerson() {}
     public ContactPerson(String id, String firstName, String lastName, String emailAddress) {
         this.id           = id;
@@ -47,9 +65,4 @@ public class ContactPerson implements Serializable {
     public ContactList getLightWeightContact() {
         return new ContactList(id, firstName + " " + lastName);
     }
-
-    private String id;
-    private String firstName;
-    private String emailAddress;
-    private String lastName;
 }

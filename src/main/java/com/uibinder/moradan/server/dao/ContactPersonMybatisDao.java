@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * Mybatis + Spring (XML | Annotation) Mapper
  * {@link http://hmkcode.com/mybatis-spring-xml-annotation-mapper/}
  */
-public interface ContactPersonMybatisDao {
+public interface ContactPersonMybatisDao extends ContactPersonDao {
 
     @Select("SELECT * FROM contacts WHERE id = #{id}")
     ContactPerson getContact(@Param("id") String id);

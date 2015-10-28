@@ -97,7 +97,7 @@ public class ContactListPresenter implements Presenter, ContactListView.Presente
 
 			@Override
 			public void onFailure(Throwable caught) {
-				Window.alert("Error fetching contact details");
+				Window.alert("Ошибка сервера: при выгрузке списка контактов");
 			}
 		});
 	}
@@ -120,7 +120,7 @@ public class ContactListPresenter implements Presenter, ContactListView.Presente
 
 			@Override
 			public void onFailure(Throwable caught) {
-				System.out.println("Error deleting selected contacts");
+				System.out.println("Ошибка сервера: при удалении контакта(ов)");
 			}
 		});
 	}

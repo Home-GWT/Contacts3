@@ -1,0 +1,15 @@
+https://github.com/JobTest/vitrinaPredmainTask/blob/miratex-master/Task/src/main/java/com/vitrina/dao/issue/IssueHibernateDao.java
+https://github.com/JobTest/vitrinaPredmainTask/blob/miratex-master/Task/src/main/resources/hibernate_mysql.cft.xml
+https://github.com/JobTest/vitrinaPredmainTask/blob/miratex-master/Task/src/main/resources/Spring_Beans.xml
+
+https://netbeans.org/kb/74/web/quickstart-webapps-gwt_ru.html
+(gwt spring hibernate)
+http://www.spring-source.ru/articles.php?type=manual&theme=articles&docs=article_13
+http://www.javacodegeeks.com/2010/05/gwt-2-spring-3-jpa-2-hibernate-35-2.html
+
+http://127.0.0.1:8888/GxtModule.jsp#StudentsListPlace:list
+http://habrahabr.ru/post/246285/
+http://www.javabeat.net/what-is-model-view-presenter-mvp-in-gwt-application/
+http://martinfowler.com/eaaDev/PassiveScreen.html
+
+(Использование шаблона Command для организации RPC-вызовов в GWT) http://habrahabr.ru/post/94844/

@@ -31,4 +31,7 @@
         <property name="basePackage" value="com.moradan.server.dao"/>
     </bean>
 
+    <bean id="HibernateDao" class="com.moradan.server.dao.ContactPersonHibernateDao">
+        <constructor-arg value="hibernate_mysql.cft.xml"/>
+    </bean>
 </beans>

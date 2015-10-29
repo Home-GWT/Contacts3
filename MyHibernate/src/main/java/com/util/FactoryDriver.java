@@ -1,10 +1,10 @@
-package com.moradan.server.util;
+package com.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 /**
- * Created by alexandr on 28.10.15.
+ * Created by alexandr on 13.08.15.
  */
 public class FactoryDriver {
 

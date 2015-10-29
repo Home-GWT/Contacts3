@@ -1,4 +1,4 @@
-package com.moradan.dao;
+package com.moradan.server.dao;
 
 import com.moradan.shared.domain.ContactPerson;
 

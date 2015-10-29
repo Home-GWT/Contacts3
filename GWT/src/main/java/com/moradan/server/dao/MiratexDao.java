@@ -1,6 +1,6 @@
-package com.moradan.dao;
+package com.moradan.server.dao;
 
-import com.moradan.shared.domain.Driver;
+import com.moradan.shared.domain.Miratex;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -10,79 +10,76 @@ import java.util.List;
 /**
  * Created by alexandr on 13.08.15.
  */
-public class DriverDao {
+public class MiratexDao {
 
-    public DriverDao(SessionFactory sessionFactory){
+    public MiratexDao(SessionFactory sessionFactory){
         this.sessionFactory = sessionFactory;
     }
 
-    public void add(Driver driver){
-        Session session = null;
-        Transaction transaction = null;
-        try{
-            session = sessionFactory.openSession();
-            transaction = session.beginTransaction();
-            session.save(driver);
-            transaction.commit();
-        }catch (Exception e1){
-//            try{
-                transaction.rollback();
-//            }catch (Exception e2){}
-        } finally {
-//            try{
-                if(session != null && session.isOpen())
-                    session.close();
-//            } catch (Exception e3){}
-        }
-    }
-
-    public Driver get(int id){
-        Session session = sessionFactory.openSession();
-        return (Driver) session.get(Driver.class,id);
-    }
-
-    public List<Driver> getAll(){
-        Session session = sessionFactory.openSession();
-        return session.createCriteria(Driver.class).list();
-    }
-
-    public void update(Driver driver){
-        Session session = null;
-        Transaction transaction = null;
-        try{
-            session = sessionFactory.openSession();
-            transaction = session.beginTransaction();
-            transaction.commit();
-        } catch (Exception e1){
-//            try{
-                transaction.rollback();
-//            }catch (Exception e2){}
-        } finally {
-//            try{
-                if(session != null && session.isOpen())
-                    session.close();
-//            }catch (Exception e3){}
-        }
-    }
-
-    public void delete(int id){
+    public void add(Miratex miratex){
         Session session = null;
         Transaction transaction = null;
         try {
             session = sessionFactory.openSession();
-            Driver driver = (Driver) session.get(Driver.class,id);
             transaction = session.beginTransaction();
-            session.delete(driver);
+            session.save(miratex);
             transaction.commit();
-        }catch (Exception e1){
-//            try{
+        } catch (Exception e1){
+            try{
                 transaction.rollback();
-//            }catch (Exception e2){}
-        } finally{
-//            try{
-//                if(session != null && session.isOpen())
+            } catch (Exception e2){}
+        } finally {
+            try {
+                if(session != null && session.isOpen())
                     session.close();
-//            }catch (Exception e3){}
+            }catch (Exception e3){}
+        }
+    }
+    public Miratex get(int id){
+        Session session = sessionFactory.openSession();
+        return  (Miratex) session.get(Miratex.class, id);
+    }
+    public List<Miratex> getAll(){
+        Session session = sessionFactory.openSession();
+        return session.createCriteria(Miratex.class).list();
+    }
+    public void update(Miratex miratex){
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            session = sessionFactory.openSession();
+            transaction = session.beginTransaction();
+            session.update(miratex);
+            transaction.commit();
+        } catch(Exception e1){
+            try {
+                transaction.rollback();
+            } catch(Exception e2){}
+        } finally{
+            try {
+                if(session != null && session.isOpen())
+                    session.close();
+            } catch(Exception e3){}
+        }
+    }
+    public void delete(int id){
+        Session session = null;
+        Transaction transaction = null;
+        try{
+            session = sessionFactory.openSession();
+            Miratex miratex = (Miratex) session.get(Miratex.class,id);
+            transaction = session.beginTransaction();
+            session.delete(miratex);
+            transaction.commit();
+        } catch (Exception e1){
+            try{
+                transaction.rollback();
+            } catch (Exception e2){}
+        } finally{
+            try{
+                if(session != null && session.isOpen())
+                    session.close();
+            }catch (Exception e3){}
         }
     }
 

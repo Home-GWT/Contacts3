@@ -5,29 +5,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <name>Contacts3</name>
-    <dependencies>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>4.3.5.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>3.6.3.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sf.ehcache</groupId>
-            <artifactId>ehcache-core</artifactId>
-            <version>2.5.0</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 
     <groupId>com.moradan</groupId>
     <artifactId>Contacts3</artifactId>
@@ -37,15 +14,18 @@
 
     <properties>
         <version>3.0-SNAPSHOT</version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
     </properties>
 
     <dependencyManagement>
-        <dependencies></dependencies>
+        <dependencies>
+        </dependencies>
     </dependencyManagement>
 
     <modules>
         <module>GWT</module>
-        <module>MyHibernate</module>
+        <!--<module>MyHibernate</module>-->
     </modules>
 
     <profiles></profiles>

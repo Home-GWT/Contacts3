@@ -1,8 +1,8 @@
-package com.moradan;
+package com.moradan.server;
 
 import com.moradan.client.gwt_rpc.ContactsService;
-import com.moradan.dao.ContactPersonMybatisDao;
-import com.moradan.service.ContactPersonService;
+import com.moradan.server.dao.ContactPersonMybatisDao;
+import com.moradan.server.service.ContactPersonService;
 import com.moradan.shared.ContactList;
 import com.moradan.shared.domain.ContactPerson;
 import org.apache.commons.logging.Log;

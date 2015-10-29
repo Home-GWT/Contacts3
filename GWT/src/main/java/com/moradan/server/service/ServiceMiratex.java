@@ -1,8 +1,8 @@
-package com.moradan.service;
+package com.moradan.server.service;
 
-import com.moradan.dao.MiratexDao;
+import com.moradan.server.dao.MiratexDao;
 import com.moradan.shared.domain.Miratex;
-import com.moradan.util.FactoryDriver;
+import com.moradan.server.util.FactoryDriver;
 
 import java.util.List;
 

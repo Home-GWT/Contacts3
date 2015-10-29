@@ -5,12 +5,13 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
 * Created by alexandr on 28.10.15.
 */
-public class ContactPersonHibernateDao {
+public class ContactPersonHibernateDao implements ContactPersonDao {
 
     private SessionFactory factory;
 
@@ -19,7 +20,8 @@ public class ContactPersonHibernateDao {
         this.factory = factory;
     }
 
-    public ContactPerson find(String id){
+    @Override
+    public ContactPerson getContact(String id){
         ContactPerson contact = null;
         Session session = null;
         try {
@@ -35,7 +37,8 @@ public class ContactPersonHibernateDao {
         return contact;
     }
 
-    public List<ContactPerson> getAll(){
+    @Override
+    public ArrayList<ContactPerson> getContactDetails(){
         List<ContactPerson> contacts = null;
         Session session = null;
         try {
@@ -48,16 +51,17 @@ public class ContactPersonHibernateDao {
                 session.close();
             }
         }
-        return contacts;
+        return (ArrayList)contacts;
     }
 
-    public void add(ContactPerson contact){
+    @Override
+    public void addContact(String id, String firstName, String lastName, String emailAddress){
         Session session = null;
         Transaction transaction = null;
         try {
             session = factory.openSession();
             transaction = session.beginTransaction();
-            session.save(contact);
+            session.save(new ContactPerson(id,firstName,lastName,emailAddress));
             transaction.commit();
         } catch (ExceptionInInitializerError error){
 //            System.err.println("[get-all] " + error.getMessage());
@@ -69,7 +73,8 @@ public class ContactPersonHibernateDao {
         }
     }
 
-    public void delete(String id){
+    @Override
+    public void deleteContact(String id){
         Session session = null;
         Transaction transaction = null;
         try {
@@ -88,13 +93,14 @@ public class ContactPersonHibernateDao {
         }
     }
 
-    public void update(ContactPerson contact){
+    @Override
+    public void updateContact(String id, String firstName, String lastName, String emailAddress){
         Session session = null;
         Transaction transaction = null;
         try {
             session = factory.openSession();
             transaction = session.beginTransaction();
-            session.update(contact);
+            session.update(new ContactPerson(id,firstName,lastName,emailAddress));
             transaction.commit();
         } catch (ExceptionInInitializerError error){
 //            System.err.println("[update] " + error.getMessage());

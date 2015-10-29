@@ -66,13 +66,4 @@ public class ContactPerson implements Serializable {
         return new ContactList(id, firstName + " " + lastName);
     }
 
-    @Override
-    public String toString() {
-        return "ContactPerson{" +
-                "id='" + id + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", emailAddress='" + emailAddress + '\'' +
-                '}';
-    }
 }

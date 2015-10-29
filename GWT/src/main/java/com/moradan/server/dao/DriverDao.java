@@ -25,14 +25,14 @@ public class DriverDao {
             session.save(driver);
             transaction.commit();
         }catch (Exception e1){
-//            try{
+            try{
                 transaction.rollback();
-//            }catch (Exception e2){}
+            }catch (Exception e2){}
         } finally {
-//            try{
+            try{
                 if(session != null && session.isOpen())
                     session.close();
-//            } catch (Exception e3){}
+            } catch (Exception e3){}
         }
     }
 
@@ -54,14 +54,14 @@ public class DriverDao {
             transaction = session.beginTransaction();
             transaction.commit();
         } catch (Exception e1){
-//            try{
+            try{
                 transaction.rollback();
-//            }catch (Exception e2){}
+            }catch (Exception e2){}
         } finally {
-//            try{
+            try{
                 if(session != null && session.isOpen())
                     session.close();
-//            }catch (Exception e3){}
+            }catch (Exception e3){}
         }
     }
 
@@ -75,14 +75,14 @@ public class DriverDao {
             session.delete(driver);
             transaction.commit();
         }catch (Exception e1){
-//            try{
+            try{
                 transaction.rollback();
-//            }catch (Exception e2){}
+            }catch (Exception e2){}
         } finally{
-//            try{
-//                if(session != null && session.isOpen())
+            try{
+                if(session != null && session.isOpen())
                     session.close();
-//            }catch (Exception e3){}
+            }catch (Exception e3){}
         }
     }
 

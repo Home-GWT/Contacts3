@@ -2,7 +2,7 @@ package com.moradan.server.service;
 
 import com.moradan.server.dao.MiratexDao;
 import com.moradan.shared.domain.Miratex;
-import com.moradan.server.util.FactoryDriver;
+import com.moradan.server.util.HibernateUtil;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import java.util.List;
 public class ServiceMiratex {
 
     public ServiceMiratex(){
-        dao = new MiratexDao(FactoryDriver.getSessionFactory());
+        dao = new MiratexDao(HibernateUtil.getSessionFactory());
     }
 
     public void add(Miratex miratex){

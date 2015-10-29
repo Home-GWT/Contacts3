@@ -11,9 +11,9 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "CONTACTS_HIB")
-@NamedQueries({
-        @NamedQuery(name ="contacts.findAll", query = "SELECT CONTACTS_HIB FROM ContactPerson contacts")
-})
+//@NamedQueries({
+//        @NamedQuery(name ="contacts.findAll", query = "SELECT CONTACTS_HIB FROM ContactPerson contacts")
+//})
 public class ContactPerson implements Serializable {
 
     @Id
@@ -64,5 +64,15 @@ public class ContactPerson implements Serializable {
 
     public ContactList getLightWeightContact() {
         return new ContactList(id, firstName + " " + lastName);
+    }
+
+    @Override
+    public String toString() {
+        return "ContactPerson{" +
+                "id='" + id + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", emailAddress='" + emailAddress + '\'' +
+                '}';
     }
 }

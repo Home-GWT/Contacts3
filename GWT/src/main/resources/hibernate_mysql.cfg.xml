@@ -22,8 +22,9 @@
         <property name="ibernate.cache.provider_class">org.hibernate.cache.EhCacheProvide</property>
 
         <!-- mapping files -->
-        <mapping class="com.moradan.shared.domain.Miratex" />
-        <mapping class="com.moradan.shared.domain.Driver" />
-        <mapping class="com.moradan.shared.domain.Car" />
+        <mapping class="com.moradan.shared.domain.ContactPerson" />
+        <!--<mapping class="com.moradan.shared.domain.Miratex" />-->
+        <!--<mapping class="com.moradan.shared.domain.Driver" />-->
+        <!--<mapping class="com.moradan.shared.domain.Car" />-->
     </session-factory>
 </hibernate-configuration>

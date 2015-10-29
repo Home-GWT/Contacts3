@@ -2,7 +2,7 @@ package com.moradan.server.service;
 
 import com.moradan.server.dao.DriverDao;
 import com.moradan.shared.domain.Driver;
-import com.moradan.server.util.FactoryDriver;
+import com.moradan.server.util.HibernateUtil;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import java.util.List;
 public class ServiceDriver {
 
     public ServiceDriver(){
-        dao = new DriverDao(FactoryDriver.getSessionFactory());
+        dao = new DriverDao(HibernateUtil.getSessionFactory());
     }
 
     public void add(Driver driver){

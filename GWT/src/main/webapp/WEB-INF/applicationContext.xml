@@ -10,21 +10,21 @@
 
     <context:component-scan base-package="com.moradan"/>
 
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
+    <!--<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
 
-    <!-- Подключениее базы:                          -->
-    <!-- #1 Загрузка properties-файла                -->
-    <bean id="propertyConfigurer"
-          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
-          p:location="/WEB-INF/jdbc.properties"/>
-    <!-- #1 Загрузка менеджера драйвера 'DataSource' -->
-    <bean id="dataSource"
-          class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-          p:driverClassName="${jdbc.driverClassName}"
-          p:url="${jdbc.url}"
-          p:username="${jdbc.username}"
-          p:password="${jdbc.password}"/>
+    <!--&lt;!&ndash; Подключениее базы:                          &ndash;&gt;-->
+    <!--&lt;!&ndash; #1 Загрузка properties-файла                &ndash;&gt;-->
+    <!--<bean id="propertyConfigurer"-->
+          <!--class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"-->
+          <!--p:location="/WEB-INF/jdbc.properties"/>-->
+    <!--&lt;!&ndash; #1 Загрузка менеджера драйвера 'DataSource' &ndash;&gt;-->
+    <!--<bean id="dataSource"-->
+          <!--class="org.springframework.jdbc.datasource.DriverManagerDataSource"-->
+          <!--p:driverClassName="${jdbc.driverClassName}"-->
+          <!--p:url="${jdbc.url}"-->
+          <!--p:username="${jdbc.username}"-->
+          <!--p:password="${jdbc.password}"/>-->
 
 </beans>

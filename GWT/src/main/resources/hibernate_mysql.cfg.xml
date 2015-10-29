@@ -23,8 +23,5 @@
 
         <!-- mapping files -->
         <mapping class="com.moradan.shared.domain.ContactPerson" />
-        <!--<mapping class="com.moradan.shared.domain.Miratex" />-->
-        <!--<mapping class="com.moradan.shared.domain.Driver" />-->
-        <!--<mapping class="com.moradan.shared.domain.Car" />-->
     </session-factory>
 </hibernate-configuration>

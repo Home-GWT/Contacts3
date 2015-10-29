@@ -1,6 +1,6 @@
-package com.moradan.server.service;
+package com.moradan.service;
 
-import com.moradan.server.dao.ContactPersonDao;
+import com.moradan.dao.ContactPersonDao;
 import com.moradan.shared.ContactList;
 import com.moradan.shared.domain.ContactPerson;
 

@@ -1,4 +1,4 @@
-package com.moradan.server.dao;
+package com.moradan.dao;
 
 import com.moradan.shared.domain.ContactPerson;
 import org.hibernate.Session;

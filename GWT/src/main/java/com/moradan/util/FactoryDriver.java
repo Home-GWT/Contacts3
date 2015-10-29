@@ -1,4 +1,4 @@
-package com.moradan.server.util;
+package com.moradan.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -13,7 +13,7 @@ public class FactoryDriver {
     private FactoryDriver(){}
 
     public static SessionFactory getSessionFactory(){
-        return sessionFactory == null ? sessionFactory = new Configuration().configure("hibernate_mysql.cfg.xml").buildSessionFactory() : sessionFactory;
+        return sessionFactory == null ? sessionFactory = new Configuration().configure("com/moradan/hibernate_mysql.cfg.xml").buildSessionFactory() : sessionFactory;
     }
 
 }

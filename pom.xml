@@ -45,7 +45,7 @@
 
     <modules>
         <module>GWT</module>
-        <!--<module>MyHibernate</module>-->
+        <module>MyHibernate</module>
     </modules>
 
     <profiles></profiles>

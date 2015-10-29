@@ -1,11 +1,6 @@
 package com.moradan.shared.domain;
 
-import org.hibernate.annotations.CollectionOfElements;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -28,8 +23,8 @@ public class Miratex {
     @Column(name = "friend")
     private String friend;
 
-    //@ElementCollection
-    @CollectionOfElements
+    @ElementCollection
+//    @CollectionOfElements
     @Column(name="friends")
     private List<String> friends;
 

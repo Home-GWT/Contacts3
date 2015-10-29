@@ -1,4 +1,4 @@
-package com.moradan.server.util;
+package com.moradan.util;
 
 /**
  * Created by Саша on 14.08.2015.

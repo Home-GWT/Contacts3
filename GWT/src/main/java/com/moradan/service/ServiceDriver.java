@@ -1,8 +1,8 @@
-package com.moradan.server.service;
+package com.moradan.service;
 
-import com.moradan.server.dao.DriverDao;
+import com.moradan.dao.DriverDao;
 import com.moradan.shared.domain.Driver;
-import com.moradan.server.util.FactoryDriver;
+import com.moradan.util.FactoryDriver;
 
 import java.util.List;
 

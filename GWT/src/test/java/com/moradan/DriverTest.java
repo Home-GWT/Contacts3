@@ -1,10 +1,10 @@
-package com.moradan.server;
+package com.moradan;
 
+import com.moradan.service.ServiceDriver;
+import com.moradan.service.ServiceMiratex;
 import com.moradan.shared.domain.Car;
 import com.moradan.shared.domain.Driver;
 import com.moradan.shared.domain.Miratex;
-import com.moradan.server.service.ServiceDriver;
-import com.moradan.server.service.ServiceMiratex;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -90,6 +90,7 @@ public class DriverTest {
         Miratex miratex1 = new Miratex(1,"Sasha","Lazarchuk","Sergey",friends);
         Miratex miratex2 = new Miratex(2,"Any","Nenene","Alexey",friends);
         Miratex miratex3 = new Miratex(3,"Jeny","Barusina","Olya",friends);
+        ServiceMiratex service = new ServiceMiratex();
         service.add(miratex1);
         service.add(miratex2);
         service.add(miratex3);
@@ -127,15 +128,13 @@ public class DriverTest {
 //        Driver driver1 = new Driver("Sasha","Nikolaev",cars1);
 //        Driver driver2 = new Driver("Yana","Nikolaev",cars2);
 //        Driver driver3 = new Driver("Nick","Nikolaev",cars3);
-        service2.add(driver1);
-        service2.add(driver2);
-        service2.add(driver3);
+        ServiceDriver service = new ServiceDriver();
+        service.add(driver1);
+        service.add(driver2);
+        service.add(driver3);
 
-        for(Driver driver:service2.getAll())
+        for(Driver driver:service.getAll())
             System.out.println("ID: " + driver);
     }
-
-    public static ServiceMiratex service = new ServiceMiratex();
-    public static ServiceDriver service2 = new ServiceDriver();
 
 }

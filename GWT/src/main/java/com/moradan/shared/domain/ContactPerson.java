@@ -16,6 +16,8 @@ import java.io.Serializable;
 //})
 public class ContactPerson implements Serializable {
 
+    private static final long serialVersionUID = -5527566248002296042L;
+
     @Id
     @Column(name = "id")
     private String id;

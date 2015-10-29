@@ -4,11 +4,11 @@ CREATE DATABASE hellogwt;
 
   -- TABLE: greetings
 
-CREATE TABLE contacts ( id VARCHAR(50) NOT NULL, firstName VARCHAR(50), lastName VARCHAR(50), emailAddress VARCHAR(50), PRIMARY KEY (id) );
+CREATE TABLE CONTACTS_HIB ( id VARCHAR(50) NOT NULL, first_name VARCHAR(50), last_name VARCHAR(50), email_address VARCHAR(50), PRIMARY KEY (id) );
 
 -- INSERT:
 
-INSERT INTO contacts (id,firstName,lastName,emailAddress) VALUES
+INSERT INTO contacts (id,first_name,last_name,email_address) VALUES
   ('8ba9fc0e-c90a-4a4b-a14f-8066c9dd3bff','Hollie','Voss','mark@example.com'),
   ('c3b6dd49-5d81-4091-a760-2d5d1505f686','Emerson','Milton','hollie@example.com'),
   ('5ee0e561-135c-4710-8a03-9a0ce0ea31f2','Healy','Colette','boticario@example.com'),

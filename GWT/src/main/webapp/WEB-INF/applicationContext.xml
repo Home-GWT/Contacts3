@@ -27,8 +27,4 @@
           p:username="${jdbc.username}"
           p:password="${jdbc.password}"/>
 
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.moradan.server.dao"/>
-    </bean>
-
 </beans>

@@ -18,11 +18,6 @@ public class ContactsServiceServlet implements ContactsService {
 
     private static Log log = LogFactory.getLog(ContactsServiceServlet.class);
 
-//    /**
-//     * Чтобы использовать-создать объект persistence-модели, в 'Spring-е' аннотируем поле '@Autowired' (собственно в этом и заключается способ реализации работы с базой)
-//     */
-//    @Autowired
-//    private ContactPersonMybatisDao dao;
     private ContactPersonHibernateDao dao = new ContactPersonHibernateDao(HibernateUtil.getSessionFactory());
 
     @Override

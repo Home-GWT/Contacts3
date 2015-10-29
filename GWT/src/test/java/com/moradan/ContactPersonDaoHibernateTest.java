@@ -63,12 +63,12 @@ public class ContactPersonDaoHibernateTest {
         String expected1 = "lastName-2";
         String expected2 = "lastName-1";
 
-////        assertEquals("(Get-All) ContactPerson:",expected0,actual0);
-////        assertEquals("(Get-All) ContactPerson:",expected1,actual1);
-////        assertEquals("(Get-All) ContactPerson:",expected2,actual2);
-//        System.out.println(actual0);
-//        System.out.println(actual1);
-//        System.out.println(actual2);
+//        assertEquals("(Get-All) ContactPerson:",expected0,actual0);
+//        assertEquals("(Get-All) ContactPerson:",expected1,actual1);
+//        assertEquals("(Get-All) ContactPerson:",expected2,actual2);
+        System.out.println(actual0);
+        System.out.println(actual1);
+        System.out.println(actual2);
     }
 
     @Test
@@ -86,7 +86,7 @@ public class ContactPersonDaoHibernateTest {
             dao.deleteContact(contact.getId());
 
         int last     = dao.getContactDetails().size();
-        int result   = first-last;
+        int result   = first - last;
         int actual   = first - result;
         int expected = 0;
 

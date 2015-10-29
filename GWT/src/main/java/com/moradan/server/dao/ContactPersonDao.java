@@ -2,7 +2,7 @@ package com.moradan.server.dao;
 
 import com.moradan.shared.domain.ContactPerson;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Саша on 28.10.2015.
@@ -13,6 +13,6 @@ public interface ContactPersonDao {
     void addContact(String id, String firstName, String lastName, String emailAddress);
     void updateContact(String id, String firstName, String lastName, String emailAddress);
     void deleteContact(String id);
-    ArrayList<ContactPerson> getContactDetails();
+    List<ContactPerson> getContactDetails();
 
 }

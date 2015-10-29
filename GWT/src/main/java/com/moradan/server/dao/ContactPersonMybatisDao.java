@@ -4,7 +4,7 @@ import com.moradan.shared.domain.ContactPerson;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Это Persistence-модель (определение), реализована через 'Spring'
@@ -27,5 +27,5 @@ public interface ContactPersonMybatisDao extends ContactPersonDao {
     void deleteContact(@Param("id") String id);
 
     @Select("SELECT * FROM contacts")
-    ArrayList<ContactPerson> getContactDetails();
+    List<ContactPerson> getContactDetails();
 }

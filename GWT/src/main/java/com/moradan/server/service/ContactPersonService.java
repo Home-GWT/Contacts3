@@ -5,6 +5,7 @@ import com.moradan.shared.ContactList;
 import com.moradan.shared.domain.ContactPerson;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -23,8 +24,8 @@ public class ContactPersonService {
         return dao.getContact(id);
     }
 
-    public ArrayList<ContactList> getAll() {
-        ArrayList<ContactList> contactDetails = new ArrayList<ContactList>();
+    public List<ContactList> getAll() {
+        List<ContactList> contactDetails = new ArrayList<ContactList>();
         for (ContactPerson contact : dao.getContactDetails())
             contactDetails.add(contact.getLightWeightContact());
         return contactDetails;
@@ -35,7 +36,7 @@ public class ContactPersonService {
         return true;
     }
 
-    public ArrayList<ContactList> delete(ArrayList<String> ids) {
+    public List<ContactList> delete(List<String> ids) {
         for (int i = 0; i < ids.size(); ++i)
             delete(ids.get(i));
         return getAll();

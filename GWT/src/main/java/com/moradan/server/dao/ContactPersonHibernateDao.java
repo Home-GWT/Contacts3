@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by alexandr on 13.08.15.
  */
-public class ContactPersonHibernateDao {
+public class ContactPersonHibernateDao implements ContactPersonDao {
 
     private SessionFactory factory;
 

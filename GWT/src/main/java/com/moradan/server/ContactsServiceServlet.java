@@ -1,13 +1,13 @@
 package com.moradan.server;
 
 import com.moradan.client.gwt_rpc.ContactsService;
-import com.moradan.server.dao.ContactPersonMybatisDao;
+import com.moradan.server.dao.ContactPersonHibernateDao;
 import com.moradan.server.service.ContactPersonService;
+import com.moradan.server.util.HibernateUtil;
 import com.moradan.shared.ContactList;
 import com.moradan.shared.domain.ContactPerson;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,16 +18,17 @@ public class ContactsServiceServlet implements ContactsService {
 
     private static Log log = LogFactory.getLog(ContactsServiceServlet.class);
 
-    /**
-     * Чтобы использовать-создать объект persistence-модели, в 'Spring-е' аннотируем поле '@Autowired' (собственно в этом и заключается способ реализации работы с базой)
-     */
-    @Autowired
-    private ContactPersonMybatisDao dao;
+//    /**
+//     * Чтобы использовать-создать объект persistence-модели, в 'Spring-е' аннотируем поле '@Autowired' (собственно в этом и заключается способ реализации работы с базой)
+//     */
+//    @Autowired
+//    private ContactPersonMybatisDao dao;
+    private ContactPersonHibernateDao dao = new ContactPersonHibernateDao(HibernateUtil.getSessionFactory());
 
     @Override
     public ArrayList<ContactList> getContactDetails() {
         ContactPersonService service = new ContactPersonService(dao);
-        return service.getAll();
+        return (ArrayList) service.getAll();
     }
 
     @Override
@@ -45,7 +46,7 @@ public class ContactsServiceServlet implements ContactsService {
     @Override
     public ArrayList<ContactList> deleteContacts(ArrayList<String> ids) {
         ContactPersonService service = new ContactPersonService(dao);
-        return service.delete(ids);
+        return (ArrayList) service.delete(ids);
     }
 
     @Override

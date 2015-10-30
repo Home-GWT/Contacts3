@@ -1,6 +1,6 @@
 -- DATABASE: hellogwt
 
-CREATE DATABASE hellogwt;
+CREATE DATABASE gwt;
 
   -- TABLE: greetings
 
@@ -8,7 +8,7 @@ CREATE TABLE CONTACTS_HIB ( id VARCHAR(50) NOT NULL, first_name VARCHAR(50), las
 
 -- INSERT:
 
-INSERT INTO contacts (id,first_name,last_name,email_address) VALUES
+INSERT INTO CONTACTS_HIB (id,first_name,last_name,email_address) VALUES
   ('8ba9fc0e-c90a-4a4b-a14f-8066c9dd3bff','Hollie','Voss','mark@example.com'),
   ('c3b6dd49-5d81-4091-a760-2d5d1505f686','Emerson','Milton','hollie@example.com'),
   ('5ee0e561-135c-4710-8a03-9a0ce0ea31f2','Healy','Colette','boticario@example.com'),

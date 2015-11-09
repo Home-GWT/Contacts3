@@ -17,7 +17,7 @@ import java.util.List;
 public class ContactListPresenter implements Presenter, ContactListView.Presenter<ContactList> {
 
 	private                  List<ContactList> contactDetails;
-	private final ContactsServiceAsync rpcService;
+	private final         ContactsServiceAsync rpcService;
 	private final                     EventBus eventBus;
 	private final ContactListView<ContactList> view;
 	private final  SelectionModel<ContactList> selectionModel;

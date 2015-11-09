@@ -18,7 +18,7 @@ public class AppPresenter implements Presenter, ValueChangeHandler<String> {
 	private final ContactsServiceAsync rpcService;
 	private                 HasWidgets container;
 	private        ContactListViewImpl contactsView;
-	private ContactPersonViewImpl editContactView;
+	private      ContactPersonViewImpl editContactView;
 
 	public AppPresenter(ContactsServiceAsync rpcService, EventBus eventBus) {
 		this.eventBus   = eventBus;
